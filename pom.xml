@@ -1,0 +1,53 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.nduyhai</groupId>
+  <artifactId>i18n</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0.0</version>
+  <name>i18n</name>
+  <url>https://github.com/nduyhai/i18n</url>
+
+  <modules>
+    <module>i18n-core</module>
+    <module>i18n-spring-boot-autoconfigure</module>
+    <module>i18n-spring-boot-starter</module>
+    <module>i18n-example</module>
+  </modules>
+
+  <scm>
+    <connection>scm:git:ssh://git@github.com/nduyhai/i18n.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/nduyhai/i18n.git
+    </developerConnection>
+    <tag>i18n-0.0.1</tag>
+    <url>${project.url}</url>
+  </scm>
+
+  <distributionManagement>
+    <repository>
+      <id>github</id>
+      <name>GitHub OWNER Apache Maven Packages</name>
+      <url>https://maven.pkg.github.com/nduyhai/i18n</url>
+    </repository>
+  </distributionManagement>
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-release-plugin</artifactId>
+          <version>3.1.1</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
