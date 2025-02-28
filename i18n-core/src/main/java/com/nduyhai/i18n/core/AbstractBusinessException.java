@@ -2,7 +2,7 @@ package com.nduyhai.i18n.core;
 
 public abstract class AbstractBusinessException extends RuntimeException implements BaseException {
 
-  protected final BaseErrorCode errorCode;
+  protected final transient BaseErrorCode errorCode;
 
   protected AbstractBusinessException(BaseErrorCode errorCode) {
     super(errorCode.getCode());
