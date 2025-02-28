@@ -11,7 +11,7 @@
   </parent>
   <groupId>com.nduyhai</groupId>
   <artifactId>i18n-spring-boot-autoconfigure</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.1</version>
   <name>i18n-spring-boot-autoconfigure</name>
   <description>i18n-spring-boot-autoconfigure</description>
   <url/>
@@ -39,7 +39,7 @@
     <dependency>
       <groupId>com.nduyhai</groupId>
       <artifactId>i18n-core</artifactId>
-      <version>0.0.1-SNAPSHOT</version>
+      <version>0.0.1</version>
     </dependency>
 
     <dependency>
