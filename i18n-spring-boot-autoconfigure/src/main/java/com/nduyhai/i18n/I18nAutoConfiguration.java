@@ -47,13 +47,10 @@ public class I18nAutoConfiguration {
 
   }
 
-
   private HttpStatusCode status(BaseException ex) {
-    if (ex instanceof BaseHttpErrorCode) {
-      return ((BaseHttpErrorCode) ex).getHttpStatusCode();
-    }
-    return HttpStatus.INTERNAL_SERVER_ERROR;
+    return ex instanceof BaseHttpErrorCode httpError
+        ? httpError.getHttpStatusCode()
+        : HttpStatus.INTERNAL_SERVER_ERROR;
   }
-
 
 }
