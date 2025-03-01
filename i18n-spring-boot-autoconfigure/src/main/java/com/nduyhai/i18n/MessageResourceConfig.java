@@ -4,8 +4,6 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
-import org.springframework.web.servlet.LocaleResolver;
-import org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver;
 
 public class MessageResourceConfig {
 
@@ -22,10 +20,4 @@ public class MessageResourceConfig {
     }
 
 
-    @Bean
-    public LocaleResolver localeResolver(I18nProperties properties) {
-        AcceptHeaderLocaleResolver localeResolver = new AcceptHeaderLocaleResolver();
-        localeResolver.setDefaultLocale(properties.getDefaultLocale());
-        return localeResolver;
-    }
 }
