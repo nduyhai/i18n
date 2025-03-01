@@ -11,7 +11,7 @@
   </parent>
   <groupId>com.nduyhai</groupId>
   <artifactId>i18n-spring-boot-starter</artifactId>
-  <version>0.0.3</version>
+  <version>0.0.4</version>
   <name>i18n-spring-boot-starter</name>
   <description>i18n-spring-boot-starter</description>
   <url/>
@@ -25,7 +25,7 @@
     <connection>scm:git:ssh://git@github.com/nduyhai/i18n.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/nduyhai/i18n.git
     </developerConnection>
-    <tag>i18n-0.0.3</tag>
+    <tag>i18n-0.0.4</tag>
     <url>${project.url}</url>
   </scm>
   <properties>
@@ -39,7 +39,7 @@
     <dependency>
       <groupId>com.nduyhai</groupId>
       <artifactId>i18n-spring-boot-autoconfigure</artifactId>
-      <version>0.0.3</version>
+      <version>0.0.4</version>
     </dependency>
 
     <dependency>

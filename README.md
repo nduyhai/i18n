@@ -38,10 +38,10 @@ curl --location --request GET 'http://localhost:8080/greeting' \
 * Using vn locale
 ```bash
 curl --location --request POST 'http://localhost:8080/greeting' \
---header 'Accept-Language: vn-VN'
+--header 'Accept-Language: vi-VN'
 ```
 
 ```bash
 curl --location --request GET 'http://localhost:8080/greeting' \
---header 'Accept-Language: vn'
+--header 'Accept-Language: vi'
 ```

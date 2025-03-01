@@ -1,6 +1,9 @@
 spring:
   application:
     name: i18n-example
+  web:
+    locale: vi_VN
+    locale-resolver: accept_header
 
 i18n:
   enabled: true

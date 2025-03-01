@@ -9,17 +9,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(("/greeting"))
 public class GreetingController {
 
-  @GetMapping
-  public void hello() {
-    throw new GreetingBusinessException(GreetingErrorCode.INVALID_REQUEST);
+    @GetMapping
+    public void hello() {
+        throw new GreetingBusinessException(GreetingErrorCode.INVALID_REQUEST);
 
-  }
+    }
 
-  @PostMapping
-  public void create() {
-    throw new GreetingBusinessException(GreetingErrorCode.INTERNAL_SERVER_ERROR);
+    @PostMapping
+    public void create() {
+        throw new GreetingBusinessException(GreetingErrorCode.INTERNAL_SERVER_ERROR);
 
-  }
+    }
 
 
 }
