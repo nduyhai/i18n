@@ -12,7 +12,7 @@
   <groupId>com.nduyhai</groupId>
   <artifactId>i18n-redis-example</artifactId>
   <version>0.0.6</version>
-  <name>i18n-example</name>
+  <name>i18n-redis-example</name>
   <description>i18n-example</description>
   <url/>
   <licenses>
