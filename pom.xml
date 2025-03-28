@@ -15,6 +15,7 @@
     <module>i18n-spring-boot-autoconfigure</module>
     <module>i18n-spring-boot-starter</module>
     <module>i18n-example</module>
+    <module>i18n-redis-example</module>
   </modules>
 
   <scm>

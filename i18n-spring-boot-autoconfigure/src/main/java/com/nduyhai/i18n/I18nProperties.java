@@ -7,7 +7,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 public class I18nProperties {
 
   private boolean enabled;
-  private MessageResolverProvider provider = MessageResolverProvider.LOCAL;
+  private MessageResolverProvider provider;
 
   public boolean isEnabled() {
     return enabled;
@@ -24,5 +24,6 @@ public class I18nProperties {
   public void setProvider(MessageResolverProvider provider) {
     this.provider = provider;
   }
+
 }
 

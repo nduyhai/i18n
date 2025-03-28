@@ -1,7 +1,7 @@
 package com.nduyhai.i18n.provider.local;
 
 import com.nduyhai.i18n.core.resolver.I18nMessageResolver;
-import com.nduyhai.i18n.core.resolver.LocalI18nMessageResolver;
+import com.nduyhai.i18n.core.resolver.local.LocalI18nMessageResolver;
 import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;

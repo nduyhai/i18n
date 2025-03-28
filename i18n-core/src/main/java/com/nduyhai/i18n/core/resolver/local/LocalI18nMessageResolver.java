@@ -1,6 +1,7 @@
-package com.nduyhai.i18n.core.resolver;
+package com.nduyhai.i18n.core.resolver.local;
 
 import com.nduyhai.i18n.core.error.AbstractBusinessException;
+import com.nduyhai.i18n.core.resolver.I18nMessageResolver;
 import java.util.Locale;
 import org.springframework.context.MessageSource;
 
