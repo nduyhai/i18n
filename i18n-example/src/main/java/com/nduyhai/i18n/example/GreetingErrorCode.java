@@ -1,14 +1,16 @@
 package com.nduyhai.i18n.example;
 
-import com.nduyhai.i18n.core.BaseHttpErrorCode;
+import com.nduyhai.i18n.core.error.BaseHttpErrorCode;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 
 public enum GreetingErrorCode implements BaseHttpErrorCode {
   INTERNAL_SERVER_ERROR(HttpStatus.INTERNAL_SERVER_ERROR, "G500000",
       "greeting.error.internalServerError"),
-  INVALID_REQUEST(HttpStatus.BAD_REQUEST, "G400000",
+  BAD_REQUEST(HttpStatus.BAD_REQUEST, "G400000",
       "greeting.error.badRequest"),
+  INVALID_REQUEST(HttpStatus.BAD_REQUEST, "G400001",
+      "greeting.error.invalidRequest"),
   ;
 
   private final HttpStatusCode httpStatusCode;
