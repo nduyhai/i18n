@@ -1,4 +1,4 @@
-package com.nduyhai.i18n.core;
+package com.nduyhai.i18n.core.error;
 
 public interface BaseException {
 
