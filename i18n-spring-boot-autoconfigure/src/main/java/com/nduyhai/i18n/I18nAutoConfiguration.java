@@ -5,6 +5,7 @@ import com.nduyhai.i18n.core.error.BaseException;
 import com.nduyhai.i18n.core.error.BaseHttpErrorCode;
 import com.nduyhai.i18n.core.resolver.I18nMessageResolver;
 import com.nduyhai.i18n.provider.local.LocalMessageResolverConfig;
+import com.nduyhai.i18n.provider.redis.RedisMessageResolverConfig;
 import java.util.Locale;
 import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
@@ -17,7 +18,8 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 @EnableConfigurationProperties(I18nProperties.class)
-@ImportAutoConfiguration(LocalMessageResolverConfig.class)
+@ImportAutoConfiguration(classes = {LocalMessageResolverConfig.class,
+    RedisMessageResolverConfig.class})
 @ConditionalOnProperty(prefix = "i18n", name = "enabled", havingValue = "true", matchIfMissing = true)
 @RestControllerAdvice
 public class I18nAutoConfiguration {
@@ -49,7 +51,7 @@ public class I18nAutoConfiguration {
   }
 
   private HttpStatusCode status(BaseException ex) {
-    return ex instanceof BaseHttpErrorCode httpError ? httpError.getHttpStatusCode()
+    return ex.getErrorCode() instanceof BaseHttpErrorCode httpError ? httpError.getHttpStatusCode()
         : HttpStatus.INTERNAL_SERVER_ERROR;
   }
 
