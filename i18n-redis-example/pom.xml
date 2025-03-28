@@ -11,8 +11,8 @@
   </parent>
   <groupId>com.nduyhai</groupId>
   <artifactId>i18n-redis-example</artifactId>
-  <version>0.0.5</version>
-  <name>i18n-example</name>
+  <version>0.0.6</version>
+  <name>i18n-redis-example</name>
   <description>i18n-example</description>
   <url/>
   <licenses>
@@ -25,7 +25,7 @@
     <connection>scm:git:ssh://git@github.com/nduyhai/i18n.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/nduyhai/i18n.git
     </developerConnection>
-    <tag>i18n-0.0.5</tag>
+    <tag>i18n-0.0.6</tag>
     <url>${project.url}</url>
   </scm>
   <properties>
@@ -47,7 +47,7 @@
     <dependency>
       <groupId>com.nduyhai</groupId>
       <artifactId>i18n-spring-boot-starter</artifactId>
-      <version>0.0.5</version>
+      <version>0.0.6</version>
     </dependency>
 
     <dependency>
