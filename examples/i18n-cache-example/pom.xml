@@ -41,16 +41,13 @@
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-cache</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-data-redis</artifactId>
+      <groupId>com.nduyhai</groupId>
+      <artifactId>i18n-spring-boot-starter</artifactId>
+      <version>0.0.7</version>
     </dependency>
     <dependency>
       <groupId>com.nduyhai</groupId>
-      <artifactId>i18n-spring-boot-starter</artifactId>
+      <artifactId>i18n-cache-spring-boot-starter</artifactId>
       <version>0.0.7</version>
     </dependency>
 

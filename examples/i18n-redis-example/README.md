@@ -2,7 +2,7 @@
 
 ## Redis set key
 ```bash
-SET G400001_vi-VN "This is my message"
+SET G400001|vi "This is my message"
 ```
 
 ## Test with API
