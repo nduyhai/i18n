@@ -6,7 +6,7 @@
   <groupId>com.nduyhai</groupId>
   <artifactId>i18n</artifactId>
   <packaging>pom</packaging>
-  <version>0.0.6</version>
+  <version>0.0.7</version>
   <name>i18n</name>
   <url>https://github.com/nduyhai/i18n</url>
 
@@ -14,15 +14,16 @@
     <module>i18n-core</module>
     <module>i18n-spring-boot-autoconfigure</module>
     <module>i18n-spring-boot-starter</module>
-    <module>i18n-example</module>
-    <module>i18n-redis-example</module>
+    <module>examples/i18n-example</module>
+    <module>examples/i18n-redis-example</module>
+    <module>examples/i18n-cache-example</module>
   </modules>
 
   <scm>
     <connection>scm:git:ssh://git@github.com/nduyhai/i18n.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/nduyhai/i18n.git
     </developerConnection>
-    <tag>i18n-0.0.6</tag>
+    <tag>i18n-0.0.7</tag>
     <url>${project.url}</url>
   </scm>
 
