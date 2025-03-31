@@ -42,11 +42,6 @@
     </dependency>
     <dependency>
       <groupId>com.nduyhai</groupId>
-      <artifactId>i18n-spring-boot-starter</artifactId>
-      <version>0.0.7</version>
-    </dependency>
-    <dependency>
-      <groupId>com.nduyhai</groupId>
       <artifactId>i18n-cache-spring-boot-starter</artifactId>
       <version>0.0.7</version>
     </dependency>

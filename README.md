@@ -8,6 +8,37 @@ Try to use i18n in your project.
 - Support error message with I18n
 - Support message key with Redis, or file, or cache
 
+## Usage
+### Using local yml file
+
+```bash
+    <dependency>
+      <groupId>com.nduyhai</groupId>
+      <artifactId>i18n-spring-boot-starter</artifactId>
+      <version>0.0.7</version>
+    </dependency>
+```
+
+### Using Redis
+
+```bash
+ <dependency>
+      <groupId>com.nduyhai</groupId>
+      <artifactId>i18n-redis-spring-boot-starter</artifactId>
+      <version>0.0.7</version>
+    </dependency>
+
+```
+### Using Abstract cache
+
+```bash
+  <dependency>
+      <groupId>com.nduyhai</groupId>
+      <artifactId>i18n-cache-spring-boot-starter</artifactId>
+      <version>0.0.7</version>
+    </dependency>
+```
+
 ## Config ```settings.xml```
 
 Since GitHub Packages require authentication, it's best to configure it in your Maven settings.xml
