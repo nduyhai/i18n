@@ -10,10 +10,10 @@
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
   <groupId>com.nduyhai</groupId>
-  <artifactId>i18n-redis-example</artifactId>
+  <artifactId>i18n-redis-spring-boot-starter</artifactId>
   <version>0.0.7</version>
-  <name>i18n-redis-example</name>
-  <description>i18n-example</description>
+  <name>i18n-redis-spring-boot-starter</name>
+  <description>i18n-redis-spring-boot-starter</description>
   <url/>
   <licenses>
     <license/>
@@ -34,21 +34,11 @@
   <dependencies>
     <dependency>
       <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-actuator</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-web</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>com.nduyhai</groupId>
-      <artifactId>i18n-spring-boot-starter</artifactId>
-      <version>0.0.7</version>
+      <artifactId>spring-boot-starter-data-redis</artifactId>
     </dependency>
     <dependency>
       <groupId>com.nduyhai</groupId>
-      <artifactId>i18n-redis-spring-boot-starter</artifactId>
+      <artifactId>i18n-spring-boot-autoconfigure</artifactId>
       <version>0.0.7</version>
     </dependency>
 
