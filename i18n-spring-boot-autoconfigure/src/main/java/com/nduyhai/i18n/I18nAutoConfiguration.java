@@ -4,6 +4,7 @@ import com.nduyhai.i18n.core.error.AbstractBusinessException;
 import com.nduyhai.i18n.core.error.BaseException;
 import com.nduyhai.i18n.core.error.BaseHttpErrorCode;
 import com.nduyhai.i18n.core.resolver.I18nMessageResolver;
+import com.nduyhai.i18n.provider.cache.CacheMessageResolverConfig;
 import com.nduyhai.i18n.provider.local.LocalMessageResolverConfig;
 import com.nduyhai.i18n.provider.redis.RedisMessageResolverConfig;
 import java.util.Locale;
@@ -19,7 +20,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 @EnableConfigurationProperties(I18nProperties.class)
 @ImportAutoConfiguration(classes = {LocalMessageResolverConfig.class,
-    RedisMessageResolverConfig.class})
+    RedisMessageResolverConfig.class, CacheMessageResolverConfig.class})
 @ConditionalOnProperty(prefix = "i18n", name = "enabled", havingValue = "true", matchIfMissing = true)
 @RestControllerAdvice
 public class I18nAutoConfiguration {

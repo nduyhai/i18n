@@ -1,6 +1,8 @@
 package com.nduyhai.i18n.provider.redis;
 
 import com.nduyhai.i18n.core.resolver.I18nMessageResolver;
+import com.nduyhai.i18n.core.resolver.MessageKeyResolver;
+import com.nduyhai.i18n.core.resolver.key.SimpleMessageKeyResolver;
 import com.nduyhai.i18n.core.resolver.redis.RedisI18nMessageResolver;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
@@ -18,8 +20,15 @@ public class RedisMessageResolverConfig {
 
   @Bean
   @ConditionalOnMissingBean
-  public I18nMessageResolver i18nMessageResolver(
-      StringRedisTemplate redisTemplate) {
-    return new RedisI18nMessageResolver(redisTemplate);
+  public I18nMessageResolver i18nMessageResolver(StringRedisTemplate redisTemplate,
+      MessageKeyResolver messageKeyResolver) {
+    return new RedisI18nMessageResolver(redisTemplate, messageKeyResolver);
+  }
+
+
+  @Bean
+  @ConditionalOnMissingBean
+  public MessageKeyResolver messageKeyResolver() {
+    return new SimpleMessageKeyResolver();
   }
 }

@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: i18n-redis-example
+  web:
+    locale: vi_VN
+    locale-resolver: accept_header
+  data:
+    redis:
+      host: localhost
+      port: 6379
+i18n:
+  enabled: true
+  provider: cache
+server:
+  port: 8081

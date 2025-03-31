@@ -10,9 +10,9 @@
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
   <groupId>com.nduyhai</groupId>
-  <artifactId>i18n-example</artifactId>
-  <version>0.0.6</version>
-  <name>i18n-example</name>
+  <artifactId>i18n-redis-example</artifactId>
+  <version>0.0.7</version>
+  <name>i18n-redis-example</name>
   <description>i18n-example</description>
   <url/>
   <licenses>
@@ -25,7 +25,7 @@
     <connection>scm:git:ssh://git@github.com/nduyhai/i18n.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/nduyhai/i18n.git
     </developerConnection>
-    <tag>i18n-0.0.6</tag>
+    <tag>i18n-0.0.7</tag>
     <url>${project.url}</url>
   </scm>
   <properties>
@@ -41,9 +41,13 @@
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
     <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-redis</artifactId>
+    </dependency>
+    <dependency>
       <groupId>com.nduyhai</groupId>
       <artifactId>i18n-spring-boot-starter</artifactId>
-      <version>0.0.6</version>
+      <version>0.0.7</version>
     </dependency>
 
     <dependency>

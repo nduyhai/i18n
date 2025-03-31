@@ -5,7 +5,8 @@ Accept-Language: vi-VN
 ###
 
 POST http://localhost:8080/greeting
-Accept-Language: en_US
+Accept-Language: en-US
 ###
 
 PUT http://localhost:8080/greeting
+
