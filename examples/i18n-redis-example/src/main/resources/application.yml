@@ -10,6 +10,5 @@ spring:
       port: 6379
 i18n:
   enabled: true
-  provider: redis
 server:
   port: 8081
