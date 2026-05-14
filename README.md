@@ -1,42 +1,48 @@
 # i18n Spring Boot Starter
 
-Pluggable i18n error message resolution for Spring Boot. Throws a domain exception → gets a localized `ProblemDetail`
-response. Supports local property files, Redis, or any Spring Cache backend.
+[![Maven Central](https://img.shields.io/maven-central/v/com.nduyhai/i18n-spring-boot-starter)](https://central.sonatype.com/artifact/com.nduyhai/i18n-spring-boot-starter)
+[![Build](https://github.com/nduyhai/i18n/actions/workflows/maven.yml/badge.svg)](https://github.com/nduyhai/i18n/actions/workflows/maven.yml)
+[![Java](https://img.shields.io/badge/Java-21-blue)](https://adoptium.net/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+Pluggable i18n error message resolution for Spring Boot. Throws a domain exception → gets a localized `ProblemDetail` response. Supports local property files, Redis, or any Spring Cache backend.
+
+## Requirements
+
+- Java 21+
+- Spring Boot 4.x
 
 ## Installation
 
-Pick one starter depending on where you store your messages.
+Pick one starter depending on where you store your messages. The auto-configuration selects the backend automatically in priority order: **Redis → Spring Cache → local files**. If Redis or a `CacheManager` bean is not present, it falls back to the next option.
 
 **Local `.properties` files (default)**
 
 ```xml
-
 <dependency>
-    <groupId>com.nduyhai</groupId>
-    <artifactId>i18n-spring-boot-starter</artifactId>
-    <version>0.0.7</version>
+  <groupId>com.nduyhai</groupId>
+  <artifactId>i18n-spring-boot-starter</artifactId>
+  <version>0.0.7</version>
 </dependency>
 ```
 
 **Redis**
 
 ```xml
-
 <dependency>
-    <groupId>com.nduyhai</groupId>
-    <artifactId>i18n-redis-spring-boot-starter</artifactId>
-    <version>0.0.7</version>
+  <groupId>com.nduyhai</groupId>
+  <artifactId>i18n-redis-spring-boot-starter</artifactId>
+  <version>0.0.7</version>
 </dependency>
 ```
 
 **Spring Cache abstraction** (Caffeine, Hazelcast, etc.)
 
 ```xml
-
 <dependency>
-    <groupId>com.nduyhai</groupId>
-    <artifactId>i18n-cache-spring-boot-starter</artifactId>
-    <version>0.0.7</version>
+  <groupId>com.nduyhai</groupId>
+  <artifactId>i18n-cache-spring-boot-starter</artifactId>
+  <version>0.0.7</version>
 </dependency>
 ```
 
@@ -86,8 +92,7 @@ greeting.error.invalidRequest=Lỗi rồi bạn ơi: {0}!
 throw new GreetingBusinessException(GreetingErrorCode.INVALID_REQUEST, "name is required");
 ```
 
-The built-in `@RestControllerAdvice` catches `AbstractBusinessException` and returns
-a [RFC 7807 Problem Detail](https://www.rfc-editor.org/rfc/rfc7807) response:
+The built-in `@RestControllerAdvice` catches `AbstractBusinessException` and returns a [RFC 7807 Problem Detail](https://www.rfc-editor.org/rfc/rfc7807) response:
 
 ```json
 {
@@ -122,15 +127,14 @@ greeting.error.badRequest|vi  →  "Yêu cầu không hợp lệ."
 
 ## Cache backend
 
-Uses Spring Cache abstraction. Populate a cache named `i18n` with the same `{messageKey}|{languageTag}` key format
-before the application serves requests.
+Uses Spring Cache abstraction. Populate a cache named `i18n` with the same `{messageKey}|{languageTag}` key format before the application serves requests.
 
 ## Examples
 
 See the [`examples/`](examples/) directory for runnable Spring Boot apps:
 
-| Example                                             | Description                                      |
-|-----------------------------------------------------|--------------------------------------------------|
-| [`i18n-example`](examples/i18n-example)             | Local `.properties` files                        |
+| Example | Description |
+|---|---|
+| [`i18n-example`](examples/i18n-example) | Local `.properties` files |
 | [`i18n-redis-example`](examples/i18n-redis-example) | Redis backend (run `docker-compose up -d` first) |
-| [`i18n-cache-example`](examples/i18n-cache-example) | Spring Cache abstraction                         |
+| [`i18n-cache-example`](examples/i18n-cache-example) | Spring Cache abstraction |
