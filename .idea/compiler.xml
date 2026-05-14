@@ -7,16 +7,24 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="i18n-spring-boot-starter" />
-        <module name="i18n-core" />
+        <module name="i18n-cache-example" />
         <module name="i18n-spring-boot-autoconfigure" />
+        <module name="i18n-cache-spring-boot-starter" />
+        <module name="i18n-core" />
+        <module name="i18n-redis-example" />
+        <module name="i18n-redis-spring-boot-starter" />
         <module name="i18n-example" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="i18n-cache-example" options="-parameters" />
+      <module name="i18n-cache-spring-boot-starter" options="-parameters" />
       <module name="i18n-core" options="-parameters" />
       <module name="i18n-example" options="-parameters" />
+      <module name="i18n-redis-example" options="-parameters" />
+      <module name="i18n-redis-spring-boot-starter" options="-parameters" />
       <module name="i18n-spring-boot-autoconfigure" options="-parameters" />
       <module name="i18n-spring-boot-starter" options="-parameters" />
     </option>

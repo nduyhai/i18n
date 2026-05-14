@@ -10,9 +10,9 @@ import com.nduyhai.i18n.provider.redis.RedisMessageResolverConfig;
 import java.util.Locale;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
-import org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-import org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration;
+import org.springframework.boot.cache.autoconfigure.CacheAutoConfiguration;
+import org.springframework.boot.data.redis.autoconfigure.DataRedisAutoConfiguration;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
@@ -28,7 +28,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
     LocalMessageResolverConfig.class
 })
 @ConditionalOnProperty(prefix = "i18n", name = "enabled", havingValue = "true", matchIfMissing = true)
-@AutoConfiguration(after = {RedisAutoConfiguration.class, CacheAutoConfiguration.class})
+@AutoConfiguration(after = {DataRedisAutoConfiguration.class, CacheAutoConfiguration.class})
 @RestControllerAdvice
 public class I18nAutoConfiguration {
 
