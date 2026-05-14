@@ -1,7 +1,7 @@
 # i18n Spring Boot Starter
 
 [![Maven Central](https://img.shields.io/maven-central/v/com.nduyhai/i18n-spring-boot-starter)](https://central.sonatype.com/artifact/com.nduyhai/i18n-spring-boot-starter)
-[![Build](https://github.com/nduyhai/i18n/actions/workflows/maven.yml/badge.svg)](https://github.com/nduyhai/i18n/actions/workflows/maven.yml)
+[![Build](https://github.com/nduyhai/i18n/actions/workflows/release.yml/badge.svg)](https://github.com/nduyhai/i18n/actions/workflows/maven.yml)
 [![Java](https://img.shields.io/badge/Java-21-blue)](https://adoptium.net/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
